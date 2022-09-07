@@ -1,0 +1,86 @@
+unit UQueue;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils;
+
+type
+  TQueue = class
+  public
+    FItems: array of string;
+    FFront: integer;
+    FRear: integer;
+    function GetFront: string;
+    function GetRear: string;
+    function GetSize: integer;
+    constructor Create;
+    destructor Destroy; override;
+    procedure Enqueue(s: string);
+    function Dequeue: string;
+    function IsEmpty: boolean;
+    property Front: string read GetFront;
+    property Size: integer read GetSize;
+    property Rear: string read GetRear;
+  end;
+
+implementation
+
+{TQueue}
+
+constructor TQueue.Create;
+begin
+  SetLength(FItems, 5);
+  FFront := 0;
+  FRear := -1;
+end;
+
+destructor TQueue.Destroy;
+begin
+  FItems := nil;
+  inherited;
+end;
+
+function TQueue.GetSize: integer;
+begin
+  result := ((FRear - FFront) mod 5) + 1;
+end;
+
+function TQueue.GetFront: String;
+begin
+  if not IsEmpty then
+    result := FItems[FFront];
+end;
+
+function TQueue.GetRear: String;
+begin
+  if not IsEmpty then
+    result := FItems[FRear];
+end;
+
+function TQueue.IsEmpty: boolean;
+begin
+  result := Size = 0;
+end;
+
+function TQueue.Dequeue: string;
+begin
+  if not IsEmpty then
+  begin
+    result := FItems[FFront];
+    inc(FFront);
+  end;
+end;
+
+procedure TQueue.Enqueue(s: string);
+begin
+  if FRear < 4 then
+  begin
+    inc(FRear);
+    FItems[FRear] := s;
+  end;
+end;
+
+end.

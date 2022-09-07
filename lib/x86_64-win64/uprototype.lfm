@@ -1,0 +1,531 @@
+object GraphPlotter: TGraphPlotter
+  Left = 180
+  Height = 824
+  Top = 156
+  Width = 1268
+  Caption = 'Graph Plotter'
+  ClientHeight = 0
+  ClientWidth = 0
+  OnCreate = OnFormCreate
+  LCLVersion = '1.6.0.4'
+  object Chart1: TChart
+    Left = 24
+    Height = 704
+    Top = 24
+    Width = 1343
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+      end    
+      item
+        Alignment = calBottom
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object YLine1: TLineSeries
+    end
+    object YAxis: TLineSeries
+    end
+    object XAxis: TLineSeries
+    end
+    object XLine1: TLineSeries
+    end
+  end
+  object YEqualsRadioButton: TRadioButton
+    Left = 25
+    Height = 19
+    Top = 744
+    Width = 37
+    Caption = 'y ='
+    OnChange = YEqualsRadioButtonChange
+    TabOrder = 1
+  end
+  object XEqualsRadioButton: TRadioButton
+    Left = 80
+    Height = 19
+    Top = 744
+    Width = 36
+    Caption = 'x ='
+    OnChange = XEqualsRadioButtonChange
+    TabOrder = 2
+  end
+  object ParametricRadioButton: TRadioButton
+    Left = 128
+    Height = 19
+    Top = 744
+    Width = 77
+    Caption = 'Parametric'
+    OnChange = ParametricRadioButtonChange
+    TabOrder = 3
+  end
+  object XYEquationEdit: TEdit
+    Left = 25
+    Height = 23
+    Top = 776
+    Width = 200
+    TabOrder = 4
+    TextHint = 'Enter equation here'
+    Visible = False
+  end
+  object PlotButton: TButton
+    Left = 240
+    Height = 25
+    Top = 776
+    Width = 75
+    Caption = 'Plot'
+    OnClick = PlotButtonClick
+    TabOrder = 5
+  end
+  object XMinimumEdit: TEdit
+    Left = 112
+    Height = 23
+    Top = 816
+    Width = 80
+    TabOrder = 6
+  end
+  object XMaximumEdit: TEdit
+    Left = 112
+    Height = 23
+    Top = 848
+    Width = 80
+    TabOrder = 7
+  end
+  object XMinimumLabel: TLabel
+    Left = 24
+    Height = 15
+    Top = 816
+    Width = 61
+    Caption = 'x Minimum'
+    ParentColor = False
+  end
+  object XMaximumLabel: TLabel
+    Left = 25
+    Height = 15
+    Top = 848
+    Width = 62
+    Caption = 'x Maximum'
+    ParentColor = False
+  end
+  object YMinimumLabel: TLabel
+    Left = 25
+    Height = 15
+    Top = 880
+    Width = 62
+    Caption = 'y Minimum'
+    ParentColor = False
+  end
+  object YMaximumLabel: TLabel
+    Left = 25
+    Height = 15
+    Top = 912
+    Width = 63
+    Caption = 'y Maximum'
+    ParentColor = False
+  end
+  object YMinimumEdit: TEdit
+    Left = 112
+    Height = 23
+    Top = 880
+    Width = 80
+    TabOrder = 8
+  end
+  object YMaximumEdit: TEdit
+    Left = 112
+    Height = 23
+    Top = 912
+    Width = 80
+    TabOrder = 9
+  end
+  object ParaXEdit: TEdit
+    Left = 25
+    Height = 23
+    Top = 776
+    Width = 95
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+    TextHint = 'x ='
+    Visible = False
+  end
+  object ParaYEdit: TEdit
+    Left = 128
+    Height = 23
+    Top = 776
+    Width = 96
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 11
+    TextHint = 'y ='
+    Visible = False
+  end
+  object GraphListLabel: TLabel
+    Left = 1384
+    Height = 15
+    Top = 32
+    Width = 53
+    Caption = 'Graph List'
+    ParentColor = False
+  end
+  object Graph3Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 128
+    Width = 66
+    Caption = 'Graph3Label'
+    ParentColor = False
+  end
+  object Graph9Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 320
+    Width = 66
+    Caption = 'Graph9Label'
+    ParentColor = False
+  end
+  object Graph6Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 224
+    Width = 66
+    Caption = 'Graph6Label'
+    ParentColor = False
+  end
+  object Graph12Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 416
+    Width = 72
+    Caption = 'Graph12Label'
+    ParentColor = False
+  end
+  object Graph10Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 352
+    Width = 72
+    Caption = 'Graph10Label'
+    ParentColor = False
+  end
+  object Graph14Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 480
+    Width = 72
+    Caption = 'Graph14Label'
+    ParentColor = False
+  end
+  object Graph16Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 544
+    Width = 72
+    Caption = 'Graph16Label'
+    ParentColor = False
+  end
+  object Graph1Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 64
+    Width = 66
+    Caption = 'Graph1Label'
+    ParentColor = False
+  end
+  object Graph2Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 96
+    Width = 66
+    Caption = 'Graph2Label'
+    ParentColor = False
+  end
+  object Graph8Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 288
+    Width = 66
+    Caption = 'Graph8Label'
+    ParentColor = False
+  end
+  object Graph13Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 448
+    Width = 72
+    Caption = 'Graph13Label'
+    ParentColor = False
+  end
+  object Graph18Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 608
+    Width = 72
+    Caption = 'Graph18Label'
+    ParentColor = False
+  end
+  object Graph20Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 672
+    Width = 72
+    Caption = 'Graph20Label'
+    ParentColor = False
+  end
+  object Graph17Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 576
+    Width = 72
+    Caption = 'Graph17Label'
+    ParentColor = False
+  end
+  object Graph19Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 640
+    Width = 72
+    Caption = 'Graph19Label'
+    ParentColor = False
+  end
+  object Graph5Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 192
+    Width = 66
+    Caption = 'Graph5Label'
+    ParentColor = False
+  end
+  object Graph4Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 160
+    Width = 66
+    Caption = 'Graph4Label'
+    ParentColor = False
+  end
+  object Graph11Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 384
+    Width = 72
+    Caption = 'Graph11Label'
+    ParentColor = False
+  end
+  object Graph7Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 256
+    Width = 66
+    Caption = 'Graph7Label'
+    ParentColor = False
+  end
+  object Graph15Label: TLabel
+    Left = 1496
+    Height = 15
+    Top = 512
+    Width = 72
+    Caption = 'Graph15Label'
+    ParentColor = False
+  end
+  object RemoveButton1: TButton
+    Left = 1407
+    Height = 25
+    Top = 64
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 12
+  end
+  object RemoveButton2: TButton
+    Left = 1407
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 13
+  end
+  object RemoveButton3: TButton
+    Left = 1407
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 14
+  end
+  object RemoveButton4: TButton
+    Left = 1407
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 15
+  end
+  object RemoveButton5: TButton
+    Left = 1407
+    Height = 25
+    Top = 192
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 16
+  end
+  object RemoveButton6: TButton
+    Left = 1407
+    Height = 25
+    Top = 224
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 17
+  end
+  object RemoveButton7: TButton
+    Left = 1407
+    Height = 25
+    Top = 256
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 18
+  end
+  object RemoveButton8: TButton
+    Left = 1408
+    Height = 25
+    Top = 288
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 19
+  end
+  object RemoveButton9: TButton
+    Left = 1407
+    Height = 25
+    Top = 320
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 20
+  end
+  object RemoveButton10: TButton
+    Left = 1407
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 21
+  end
+  object RemoveButton11: TButton
+    Left = 1407
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 22
+  end
+  object RemoveButton12: TButton
+    Left = 1407
+    Height = 25
+    Top = 416
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 23
+  end
+  object RemoveButton13: TButton
+    Left = 1407
+    Height = 25
+    Top = 448
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 24
+  end
+  object RemoveButton14: TButton
+    Left = 1408
+    Height = 25
+    Top = 480
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 25
+  end
+  object RemoveButton15: TButton
+    Left = 1407
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 26
+  end
+  object RemoveButton16: TButton
+    Left = 1407
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 27
+  end
+  object RemoveButton17: TButton
+    Left = 1408
+    Height = 25
+    Top = 576
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 28
+  end
+  object RemoveButton18: TButton
+    Left = 1407
+    Height = 25
+    Top = 608
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 29
+  end
+  object RemoveButton19: TButton
+    Left = 1407
+    Height = 25
+    Top = 640
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 30
+  end
+  object RemoveButton20: TButton
+    Left = 1407
+    Height = 25
+    Top = 672
+    Width = 75
+    Caption = 'Remove'
+    TabOrder = 31
+  end
+  object LimitWarningLabel: TLabel
+    Left = 24
+    Height = 15
+    Top = 952
+    Width = 263
+    Caption = 'Limits were smaller than the range of the function'
+    Font.Color = clRed
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object TESTING_sycontentsLabel: TLabel
+    Left = 464
+    Height = 15
+    Top = 758
+    Width = 136
+    Caption = 'TESTING_sycontentsLabel'
+    ParentColor = False
+  end
+  object TESTING_yLabel: TLabel
+    Left = 464
+    Height = 15
+    Top = 832
+    Width = 20
+    Caption = 'ehh'
+    ParentColor = False
+  end
+  object TESTING_xLabel: TLabel
+    Left = 464
+    Height = 15
+    Top = 792
+    Width = 84
+    Caption = 'TESTING_xLabel'
+    ParentColor = False
+  end
+end
