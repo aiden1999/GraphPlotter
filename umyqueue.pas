@@ -10,20 +10,20 @@ uses
 type
   TMyQueue = class
   public
-    FItems: array of string;
+    FItems: array of UTF8String;
     FFront: integer;
     FRear: integer;
-    function GetFront: string;
-    function GetRear: string;
+    function GetFront: UTF8String;
+    function GetRear: UTF8String;
     function GetSize: integer;
     constructor Create;
     destructor Destroy; override;
-    procedure Enqueue(s: string);
-    function Dequeue: string;
+    procedure Enqueue(s: UTF8String);
+    function Dequeue: UTF8String;
     function IsEmpty: boolean;
-    property Front: string read GetFront;
+    property Front: UTF8String read GetFront;
     property Size: integer read GetSize;
-    property Rear: string read GetRear;
+    property Rear: UTF8String read GetRear;
   end;
 
 implementation
@@ -32,7 +32,7 @@ implementation
 
 constructor TMyQueue.Create;
 begin
-  SetLength(FItems, 5);
+  SetLength(FItems, 100);
   FFront := 0;
   FRear := -1;
 end;
@@ -45,16 +45,16 @@ end;
 
 function TMyQueue.GetSize: integer;
 begin
-  result := ((FRear - FFront) mod 5) + 1;
+  result := ((FRear - FFront) mod 100) + 1;
 end;
 
-function TMyQueue.GetFront: String;
+function TMyQueue.GetFront: UTF8String;
 begin
   if not IsEmpty then
     result := FItems[FFront];
 end;
 
-function TMyQueue.GetRear: String;
+function TMyQueue.GetRear: UTF8String;
 begin
   if not IsEmpty then
     result := FItems[FRear];
@@ -65,7 +65,7 @@ begin
   result := Size = 0;
 end;
 
-function TMyQueue.Dequeue: string;
+function TMyQueue.Dequeue: UTF8String;
 begin
   if not IsEmpty then
   begin
@@ -74,9 +74,9 @@ begin
   end;
 end;
 
-procedure TMyQueue.Enqueue(s: string);
+procedure TMyQueue.Enqueue(s: UTF8String);
 begin
-  if FRear < 4 then
+  if FRear < 99 then
   begin
     inc(FRear);
     FItems[FRear] := s;

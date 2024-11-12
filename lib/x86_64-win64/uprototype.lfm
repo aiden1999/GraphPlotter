@@ -1,16 +1,17 @@
 object GraphPlotter: TGraphPlotter
-  Left = 180
-  Height = 824
-  Top = 156
-  Width = 1268
+  Left = 1444
+  Height = 307
+  Top = 357
+  Width = 362
   Caption = 'Graph Plotter'
   ClientHeight = 0
   ClientWidth = 0
+  Color = clSilver
   OnCreate = OnFormCreate
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.6.4.0'
   object Chart1: TChart
     Left = 24
-    Height = 704
+    Height = 952
     Top = 24
     Width = 1343
     AxisList = <    
@@ -29,503 +30,446 @@ object GraphPlotter: TGraphPlotter
     Title.Text.Strings = (
       'TAChart'
     )
-    object YLine1: TLineSeries
+    object Line1: TLineSeries
+      LinePen.Color = 231
+      LinePen.Width = 4
     end
     object YAxis: TLineSeries
+      LinePen.Width = 2
     end
     object XAxis: TLineSeries
+      LinePen.Width = 2
     end
-    object XLine1: TLineSeries
+    object Line2: TLineSeries
+      LinePen.Color = 36095
+      LinePen.Width = 4
+    end
+    object Line3: TLineSeries
+      LinePen.Color = 61439
+      LinePen.Width = 4
+    end
+    object Line4: TLineSeries
+      LinePen.Color = 2064640
+      LinePen.Width = 4
+    end
+    object Line5: TLineSeries
+      LinePen.Color = 16729088
+      LinePen.Width = 4
+    end
+    object Line6: TLineSeries
+      LinePen.Color = 8978550
+      LinePen.Width = 4
+    end
+    object Area: TAreaSeries
+      Transparency = 80
+      AreaLinesPen.Color = clRed
+      UseZeroLevel = True
     end
   end
   object YEqualsRadioButton: TRadioButton
-    Left = 25
-    Height = 19
-    Top = 744
-    Width = 37
+    Left = 1384
+    Height = 24
+    Top = 24
+    Width = 45
     Caption = 'y ='
     OnChange = YEqualsRadioButtonChange
     TabOrder = 1
   end
   object XEqualsRadioButton: TRadioButton
-    Left = 80
-    Height = 19
-    Top = 744
-    Width = 36
+    Left = 1432
+    Height = 24
+    Top = 24
+    Width = 45
     Caption = 'x ='
     OnChange = XEqualsRadioButtonChange
     TabOrder = 2
   end
   object ParametricRadioButton: TRadioButton
-    Left = 128
-    Height = 19
-    Top = 744
-    Width = 77
+    Left = 1480
+    Height = 24
+    Top = 24
+    Width = 95
     Caption = 'Parametric'
     OnChange = ParametricRadioButtonChange
     TabOrder = 3
   end
   object XYEquationEdit: TEdit
-    Left = 25
-    Height = 23
-    Top = 776
+    Left = 1384
+    Height = 28
+    Top = 48
     Width = 200
+    OnClick = XYEquationEditClick
     TabOrder = 4
     TextHint = 'Enter equation here'
     Visible = False
   end
   object PlotButton: TButton
-    Left = 240
+    Left = 1383
     Height = 25
-    Top = 776
+    Top = 152
     Width = 75
     Caption = 'Plot'
     OnClick = PlotButtonClick
     TabOrder = 5
   end
-  object XMinimumEdit: TEdit
-    Left = 112
-    Height = 23
-    Top = 816
+  object MinimumEdit: TEdit
+    Left = 1488
+    Height = 28
+    Top = 80
     Width = 80
+    OnClick = MinimumEditClick
     TabOrder = 6
   end
-  object XMaximumEdit: TEdit
-    Left = 112
-    Height = 23
-    Top = 848
+  object MaximumEdit: TEdit
+    Left = 1488
+    Height = 28
+    Top = 112
     Width = 80
+    OnClick = MaximumEditClick
     TabOrder = 7
   end
-  object XMinimumLabel: TLabel
-    Left = 24
-    Height = 15
-    Top = 816
-    Width = 61
+  object MinimumLabel: TLabel
+    Left = 1384
+    Height = 20
+    Top = 80
+    Width = 74
     Caption = 'x Minimum'
     ParentColor = False
   end
-  object XMaximumLabel: TLabel
-    Left = 25
-    Height = 15
-    Top = 848
-    Width = 62
+  object MaximumLabel: TLabel
+    Left = 1384
+    Height = 20
+    Top = 112
+    Width = 77
     Caption = 'x Maximum'
     ParentColor = False
   end
-  object YMinimumLabel: TLabel
-    Left = 25
-    Height = 15
-    Top = 880
-    Width = 62
-    Caption = 'y Minimum'
-    ParentColor = False
-  end
-  object YMaximumLabel: TLabel
-    Left = 25
-    Height = 15
-    Top = 912
-    Width = 63
-    Caption = 'y Maximum'
-    ParentColor = False
-  end
-  object YMinimumEdit: TEdit
-    Left = 112
-    Height = 23
-    Top = 880
-    Width = 80
-    TabOrder = 8
-  end
-  object YMaximumEdit: TEdit
-    Left = 112
-    Height = 23
-    Top = 912
-    Width = 80
-    TabOrder = 9
-  end
   object ParaXEdit: TEdit
-    Left = 25
-    Height = 23
-    Top = 776
+    Left = 1384
+    Height = 28
+    Top = 48
     Width = 95
+    OnClick = ParaXEditClick
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 10
+    TabOrder = 8
     TextHint = 'x ='
     Visible = False
   end
   object ParaYEdit: TEdit
-    Left = 128
-    Height = 23
-    Top = 776
+    Left = 1488
+    Height = 28
+    Top = 48
     Width = 96
+    OnClick = ParaYEditClick
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 11
+    TabOrder = 9
     TextHint = 'y ='
     Visible = False
   end
   object GraphListLabel: TLabel
     Left = 1384
-    Height = 15
-    Top = 32
-    Width = 53
+    Height = 20
+    Top = 728
+    Width = 66
     Caption = 'Graph List'
     ParentColor = False
   end
   object Graph3Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 128
-    Width = 66
+    Left = 1472
+    Height = 40
+    Top = 824
+    Width = 162
     Caption = 'Graph3Label'
-    ParentColor = False
-  end
-  object Graph9Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 320
-    Width = 66
-    Caption = 'Graph9Label'
-    ParentColor = False
-  end
-  object Graph6Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 224
-    Width = 66
-    Caption = 'Graph6Label'
-    ParentColor = False
-  end
-  object Graph12Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 416
-    Width = 72
-    Caption = 'Graph12Label'
-    ParentColor = False
-  end
-  object Graph10Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 352
-    Width = 72
-    Caption = 'Graph10Label'
-    ParentColor = False
-  end
-  object Graph14Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 480
-    Width = 72
-    Caption = 'Graph14Label'
-    ParentColor = False
-  end
-  object Graph16Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 544
-    Width = 72
-    Caption = 'Graph16Label'
-    ParentColor = False
-  end
-  object Graph1Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 64
-    Width = 66
-    Caption = 'Graph1Label'
-    ParentColor = False
-  end
-  object Graph2Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 96
-    Width = 66
-    Caption = 'Graph2Label'
-    ParentColor = False
-  end
-  object Graph8Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 288
-    Width = 66
-    Caption = 'Graph8Label'
-    ParentColor = False
-  end
-  object Graph13Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 448
-    Width = 72
-    Caption = 'Graph13Label'
-    ParentColor = False
-  end
-  object Graph18Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 608
-    Width = 72
-    Caption = 'Graph18Label'
-    ParentColor = False
-  end
-  object Graph20Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 672
-    Width = 72
-    Caption = 'Graph20Label'
-    ParentColor = False
-  end
-  object Graph17Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 576
-    Width = 72
-    Caption = 'Graph17Label'
-    ParentColor = False
-  end
-  object Graph19Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 640
-    Width = 72
-    Caption = 'Graph19Label'
-    ParentColor = False
-  end
-  object Graph5Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 192
-    Width = 66
-    Caption = 'Graph5Label'
-    ParentColor = False
-  end
-  object Graph4Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 160
-    Width = 66
-    Caption = 'Graph4Label'
-    ParentColor = False
-  end
-  object Graph11Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 384
-    Width = 72
-    Caption = 'Graph11Label'
-    ParentColor = False
-  end
-  object Graph7Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 256
-    Width = 66
-    Caption = 'Graph7Label'
-    ParentColor = False
-  end
-  object Graph15Label: TLabel
-    Left = 1496
-    Height = 15
-    Top = 512
-    Width = 72
-    Caption = 'Graph15Label'
-    ParentColor = False
-  end
-  object RemoveButton1: TButton
-    Left = 1407
-    Height = 25
-    Top = 64
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 12
-  end
-  object RemoveButton2: TButton
-    Left = 1407
-    Height = 25
-    Top = 96
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 13
-  end
-  object RemoveButton3: TButton
-    Left = 1407
-    Height = 25
-    Top = 128
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 14
-  end
-  object RemoveButton4: TButton
-    Left = 1407
-    Height = 25
-    Top = 160
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 15
-  end
-  object RemoveButton5: TButton
-    Left = 1407
-    Height = 25
-    Top = 192
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 16
-  end
-  object RemoveButton6: TButton
-    Left = 1407
-    Height = 25
-    Top = 224
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 17
-  end
-  object RemoveButton7: TButton
-    Left = 1407
-    Height = 25
-    Top = 256
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 18
-  end
-  object RemoveButton8: TButton
-    Left = 1408
-    Height = 25
-    Top = 288
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 19
-  end
-  object RemoveButton9: TButton
-    Left = 1407
-    Height = 25
-    Top = 320
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 20
-  end
-  object RemoveButton10: TButton
-    Left = 1407
-    Height = 25
-    Top = 352
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 21
-  end
-  object RemoveButton11: TButton
-    Left = 1407
-    Height = 25
-    Top = 384
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 22
-  end
-  object RemoveButton12: TButton
-    Left = 1407
-    Height = 25
-    Top = 416
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 23
-  end
-  object RemoveButton13: TButton
-    Left = 1407
-    Height = 25
-    Top = 448
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 24
-  end
-  object RemoveButton14: TButton
-    Left = 1408
-    Height = 25
-    Top = 480
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 25
-  end
-  object RemoveButton15: TButton
-    Left = 1407
-    Height = 25
-    Top = 512
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 26
-  end
-  object RemoveButton16: TButton
-    Left = 1407
-    Height = 25
-    Top = 544
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 27
-  end
-  object RemoveButton17: TButton
-    Left = 1408
-    Height = 25
-    Top = 576
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 28
-  end
-  object RemoveButton18: TButton
-    Left = 1407
-    Height = 25
-    Top = 608
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 29
-  end
-  object RemoveButton19: TButton
-    Left = 1407
-    Height = 25
-    Top = 640
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 30
-  end
-  object RemoveButton20: TButton
-    Left = 1407
-    Height = 25
-    Top = 672
-    Width = 75
-    Caption = 'Remove'
-    TabOrder = 31
-  end
-  object LimitWarningLabel: TLabel
-    Left = 24
-    Height = 15
-    Top = 952
-    Width = 263
-    Caption = 'Limits were smaller than the range of the function'
-    Font.Color = clRed
+    Font.Color = clYellow
+    Font.Height = 40
     ParentColor = False
     ParentFont = False
-    Visible = False
   end
-  object TESTING_sycontentsLabel: TLabel
-    Left = 464
-    Height = 15
-    Top = 758
-    Width = 136
-    Caption = 'TESTING_sycontentsLabel'
+  object Graph1Label: TLabel
+    Left = 1472
+    Height = 40
+    Top = 744
+    Width = 162
+    Caption = 'Graph1Label'
+    Font.Color = 231
+    Font.Height = 40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Graph2Label: TLabel
+    Left = 1472
+    Height = 40
+    Top = 784
+    Width = 162
+    Caption = 'Graph2Label'
+    Font.Color = 36095
+    Font.Height = 40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Graph5Label: TLabel
+    Left = 1472
+    Height = 40
+    Top = 904
+    Width = 162
+    Caption = 'Graph5Label'
+    Font.Color = 16729088
+    Font.Height = 40
+    ParentColor = False
+    ParentFont = False
+  end
+  object Graph4Label: TLabel
+    Left = 1472
+    Height = 40
+    Top = 864
+    Width = 162
+    Caption = 'Graph4Label'
+    Font.Color = 2064640
+    Font.Height = 40
+    ParentColor = False
+    ParentFont = False
+  end
+  object RemoveButton1: TButton
+    Left = 1384
+    Height = 25
+    Top = 759
+    Width = 75
+    Caption = 'Remove'
+    OnClick = RemoveButton1Click
+    TabOrder = 10
+  end
+  object RemoveButton2: TButton
+    Left = 1383
+    Height = 25
+    Top = 799
+    Width = 75
+    Caption = 'Remove'
+    OnClick = RemoveButton2Click
+    TabOrder = 11
+  end
+  object RemoveButton3: TButton
+    Left = 1383
+    Height = 25
+    Top = 839
+    Width = 75
+    Caption = 'Remove'
+    OnClick = RemoveButton3Click
+    TabOrder = 12
+  end
+  object RemoveButton4: TButton
+    Left = 1383
+    Height = 25
+    Top = 879
+    Width = 75
+    Caption = 'Remove'
+    OnClick = RemoveButton4Click
+    TabOrder = 13
+  end
+  object RemoveButton5: TButton
+    Left = 1383
+    Height = 25
+    Top = 919
+    Width = 75
+    Caption = 'Remove'
+    OnClick = RemoveButton5Click
+    TabOrder = 14
+  end
+  object Graph6Label: TLabel
+    Left = 1472
+    Height = 40
+    Top = 944
+    Width = 162
+    Caption = 'Graph6Label'
+    Font.Color = 8978550
+    Font.Height = 40
+    ParentColor = False
+    ParentFont = False
+  end
+  object RemoveButton6: TButton
+    Left = 1383
+    Height = 25
+    Top = 952
+    Width = 75
+    Caption = 'Remove'
+    OnClick = RemoveButton6Click
+    TabOrder = 15
+  end
+  object DifferentialEdit: TEdit
+    Left = 1384
+    Height = 28
+    Top = 192
+    Width = 80
+    OnClick = DifferentialEditClick
+    TabOrder = 16
+  end
+  object DifferentiateButton: TButton
+    Left = 1480
+    Height = 25
+    Top = 192
+    Width = 96
+    Caption = 'Differentiate'
+    OnClick = DifferentiateButtonClick
+    TabOrder = 17
+  end
+  object Eqn1DiffRadioButton: TRadioButton
+    Left = 1648
+    Height = 24
+    Top = 759
+    Width = 108
+    Caption = 'Differentiate'
+    OnClick = Eqn1DiffRadioButtonClick
+    TabOrder = 18
+  end
+  object Eqn2DiffRadioButton: TRadioButton
+    Left = 1648
+    Height = 24
+    Top = 792
+    Width = 108
+    Caption = 'Differentiate'
+    OnClick = Eqn2DiffRadioButtonClick
+    TabOrder = 19
+  end
+  object DiffAnswerLabel: TLabel
+    Left = 1592
+    Height = 20
+    Top = 197
+    Width = 8
+    Caption = '0'
     ParentColor = False
   end
-  object TESTING_yLabel: TLabel
-    Left = 464
-    Height = 15
-    Top = 832
-    Width = 20
-    Caption = 'ehh'
+  object Eqn3DiffRadioButton: TRadioButton
+    Left = 1648
+    Height = 24
+    Top = 839
+    Width = 108
+    Caption = 'Differentiate'
+    OnClick = Eqn3DiffRadioButtonClick
+    TabOrder = 20
+  end
+  object Eqn4DiffRadioButton: TRadioButton
+    Left = 1648
+    Height = 24
+    Top = 879
+    Width = 108
+    Caption = 'Differentiate'
+    OnClick = Eqn4DiffRadioButtonClick
+    TabOrder = 21
+  end
+  object Eqn5DiffRadioButton: TRadioButton
+    Left = 1648
+    Height = 24
+    Top = 919
+    Width = 108
+    Caption = 'Differentiate'
+    OnClick = Eqn5DiffRadioButtonClick
+    TabOrder = 22
+  end
+  object Eqn6DiffRadioButton: TRadioButton
+    Left = 1648
+    Height = 24
+    Top = 952
+    Width = 108
+    Caption = 'Differentiate'
+    OnClick = Eqn6DiffRadioButtonClick
+    TabOrder = 23
+  end
+  object IntAnswerLabel: TLabel
+    Left = 1672
+    Height = 20
+    Top = 240
+    Width = 8
+    Caption = '0'
     ParentColor = False
   end
-  object TESTING_xLabel: TLabel
-    Left = 464
-    Height = 15
+  object IntegralLowerEdit: TEdit
+    Left = 1383
+    Height = 28
+    Top = 232
+    Width = 80
+    OnClick = IntegralLowerEditClick
+    TabOrder = 24
+  end
+  object IntegrateButton: TButton
+    Left = 1584
+    Height = 25
+    Top = 235
+    Width = 75
+    Caption = 'Integrate'
+    OnClick = IntegrateButtonClick
+    TabOrder = 25
+  end
+  object Eqn1IntRadioButton: TRadioButton
+    Left = 1776
+    Height = 24
+    Top = 759
+    Width = 84
+    Caption = 'Integrate'
+    OnClick = Eqn1IntRadioButtonClick
+    TabOrder = 26
+  end
+  object Eqn2IntRadioButton: TRadioButton
+    Left = 1776
+    Height = 24
     Top = 792
     Width = 84
-    Caption = 'TESTING_xLabel'
-    ParentColor = False
+    Caption = 'Integrate'
+    OnClick = Eqn2IntRadioButtonClick
+    TabOrder = 27
+  end
+  object Eqn3IntRadioButton: TRadioButton
+    Left = 1776
+    Height = 24
+    Top = 839
+    Width = 84
+    Caption = 'Integrate'
+    OnClick = Eqn3IntRadioButtonClick
+    TabOrder = 28
+  end
+  object Eqn4IntRadioButton: TRadioButton
+    Left = 1776
+    Height = 24
+    Top = 879
+    Width = 84
+    Caption = 'Integrate'
+    OnClick = Eqn4IntRadioButtonClick
+    TabOrder = 29
+  end
+  object Eqn5IntRadioButton: TRadioButton
+    Left = 1776
+    Height = 24
+    Top = 919
+    Width = 84
+    Caption = 'Integrate'
+    OnClick = Eqn5IntRadioButtonClick
+    TabOrder = 30
+  end
+  object Eqn6IntRadioButton: TRadioButton
+    Left = 1776
+    Height = 24
+    Top = 952
+    Width = 84
+    Caption = 'Integrate'
+    OnClick = Eqn6IntRadioButtonClick
+    TabOrder = 31
+  end
+  object IntegralUpperEdit: TEdit
+    Left = 1480
+    Height = 28
+    Top = 232
+    Width = 80
+    OnClick = IntegralUpperEditClick
+    TabOrder = 32
+    TextHint = 'Upper Limit x ='
+  end
+  object PiButton: TButton
+    Left = 1384
+    Height = 25
+    Top = 280
+    Width = 75
+    Caption = 'π'
+    OnClick = PiButtonClick
+    TabOrder = 33
   end
 end

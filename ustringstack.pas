@@ -9,17 +9,17 @@ uses
 type
   TStringStack = class
   strict private
-    FItems: array of string;
+    FItems: array of UTF8string;
     FTop:integer;
-    function GetTop:string; //inspect top item without popping
+    function GetTop:UTF8String; //inspect top item without popping
     function GetSize:integer;
   public
     constructor Create;
     destructor Destroy; override;
-    procedure Push(s:string);
-    function Pop:string;
+    procedure Push(s:UTF8String);
+    function Pop:UTF8String;
     function IsEmpty:boolean;
-    property Top: string read GetTop;
+    property Top: UTF8String read GetTop;
     property Size: integer read GetSize;
   end;
 
@@ -42,7 +42,7 @@ begin
  result:=FTop+1;
 end;
 
-function TStringStack.GetTop: string;
+function TStringStack.GetTop: UTF8String;
 begin
   if not IsEmpty then
   result:=FItems[FTop];
@@ -54,7 +54,7 @@ begin
   result:=Size=0;
 end;
 
-function TStringStack.Pop: string;
+function TStringStack.Pop: UTF8String;
 begin
   if not IsEmpty then
   begin
@@ -65,7 +65,7 @@ begin
   end;
 end;
 
-procedure TStringStack.Push(s: string);
+procedure TStringStack.Push(s: UTF8String);
 begin
   inc(FTop);
   FItems[FTop]:=s;

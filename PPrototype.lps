@@ -2,14 +2,14 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="9"/>
+    <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="PPrototype.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="76" Y="10"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="16"/>
         <UsageCount Value="264"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -21,10 +21,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UPrototype"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="304"/>
-        <CursorPos Y="364"/>
-        <FoldState Value=" T3o40h014 T1rG07y"/>
-        <ComponentState Value="1"/>
+        <TopLine Value="1104"/>
+        <CursorPos Y="1120"/>
+        <FoldState Value=" T3;00A917J"/>
         <UsageCount Value="264"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,9 +31,8 @@
       <Unit2>
         <Filename Value="ufloatstack.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="12"/>
-        <CursorPos X="37" Y="70"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="38" Y="6"/>
         <ExtraEditorCount Value="1"/>
         <ExtraEditor1>
           <EditorIndex Value="-1"/>
@@ -49,9 +47,9 @@
         <Filename Value="umyqueue.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UMyQueue"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="4"/>
-        <CursorPos X="14" Y="86"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="48"/>
+        <CursorPos Y="55"/>
         <UsageCount Value="497"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -59,133 +57,141 @@
         <Filename Value="ustringstack.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="UStringStack"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="44"/>
-        <CursorPos X="18" Y="68"/>
-        <UsageCount Value="160"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="12"/>
+        <CursorPos Y="32"/>
+        <UsageCount Value="294"/>
         <Loaded Value="True"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="2720"/>
+        <CursorPos Y="2736"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+      </Unit5>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="371" TopLine="362"/>
+        <Caret Line="331" TopLine="261"/>
       </Position1>
       <Position2>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="373" TopLine="362"/>
+        <Caret Line="332" TopLine="261"/>
       </Position2>
       <Position3>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="375" TopLine="362"/>
+        <Caret Line="333" TopLine="261"/>
       </Position3>
       <Position4>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="302" Column="27" TopLine="91"/>
+        <Caret Line="336" TopLine="261"/>
       </Position4>
       <Position5>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="360" TopLine="302"/>
+        <Caret Line="337" TopLine="261"/>
       </Position5>
       <Position6>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="361" TopLine="302"/>
+        <Caret Line="338" TopLine="261"/>
       </Position6>
       <Position7>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="362" TopLine="302"/>
+        <Caret Line="339" TopLine="262"/>
       </Position7>
       <Position8>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="363" TopLine="302"/>
+        <Caret Line="845" TopLine="829"/>
       </Position8>
       <Position9>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="364" TopLine="302"/>
+        <Caret Line="846" TopLine="829"/>
       </Position9>
       <Position10>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="366" TopLine="302"/>
+        <Caret Line="834" TopLine="828"/>
       </Position10>
       <Position11>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="373" TopLine="305"/>
+        <Caret Line="848" TopLine="741"/>
       </Position11>
       <Position12>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="375" TopLine="350"/>
+        <Caret Line="626" Column="41" TopLine="601"/>
       </Position12>
       <Position13>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="377" TopLine="352"/>
+        <Caret Line="863" Column="19" TopLine="320"/>
       </Position13>
       <Position14>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="379" TopLine="355"/>
+        <Caret Line="1153" Column="20" TopLine="1115"/>
       </Position14>
       <Position15>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="380" TopLine="356"/>
+        <Caret Line="1195" Column="20" TopLine="1158"/>
       </Position15>
       <Position16>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="382" TopLine="358"/>
+        <Caret Line="1232" Column="20" TopLine="1200"/>
       </Position16>
       <Position17>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="383" TopLine="359"/>
+        <Caret Line="1237" Column="20" TopLine="1221"/>
       </Position17>
       <Position18>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="384" TopLine="360"/>
+        <Caret Line="1279" Column="20" TopLine="1242"/>
       </Position18>
       <Position19>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="386" TopLine="362"/>
+        <Caret Line="1321" Column="20" TopLine="1284"/>
       </Position19>
       <Position20>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="387" TopLine="363"/>
+        <Caret Line="334" Column="44" TopLine="140"/>
       </Position20>
       <Position21>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="389" TopLine="365"/>
+        <Caret Line="1403" Column="23" TopLine="1363"/>
       </Position21>
       <Position22>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="390" TopLine="366"/>
+        <Caret Line="1476" Column="9" TopLine="1460"/>
       </Position22>
       <Position23>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="375" TopLine="366"/>
+        <Caret Line="846" Column="19" TopLine="343"/>
       </Position23>
       <Position24>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="377" TopLine="366"/>
+        <Caret Line="127" Column="12" TopLine="110"/>
       </Position24>
       <Position25>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="379" TopLine="366"/>
+        <Caret Line="867" Column="12" TopLine="854"/>
       </Position25>
       <Position26>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="360" TopLine="357"/>
+        <Caret Line="1415" Column="44" TopLine="1391"/>
       </Position26>
       <Position27>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="364" TopLine="361"/>
+        <Caret Line="865" Column="60" TopLine="849"/>
       </Position27>
       <Position28>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="460" Column="3" TopLine="441"/>
+        <Caret Line="526" TopLine="506"/>
       </Position28>
       <Position29>
         <Filename Value="uprototype.pas"/>
-        <Caret Line="459" Column="3" TopLine="459"/>
+        <Caret Line="1333" Column="25" TopLine="1333"/>
       </Position29>
       <Position30>
-        <Filename Value="uprototype.pas"/>
-        <Caret Line="384" Column="25" TopLine="373"/>
+        <Filename Value="PPrototype.lpr"/>
+        <Caret Line="16"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
